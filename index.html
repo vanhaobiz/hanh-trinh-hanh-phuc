@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Hạnh Phúc | Lê Văn Hào – Kỹ Sư, Kiến Trúc Sư Cuộc Sống xAI & Marathoner</title>
+    <style>
+        :root {
+            --primary: #0f3d2e;
+            --secondary: #1b6b4f;
+            --accent: #34d399;
+            --gold: #f59e0b;
+            --light-bg: #f4f8f6;
+            --text-color: #1e293b;
+            --muted: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        header.hero {
+            background: linear-gradient(135deg, #07221a 0%, var(--primary) 50%, var(--secondary) 100%);
+            color: #ffffff;
+            padding: 70px 24px 65px;
+            border-bottom: 5px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            max-width: 1040px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-avatar-wrap {
+            flex: 0 0 240px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-avatar {
+            width: 230px;
+            height: 280px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 20px;
+            border: 4px solid rgba(52, 211, 153, 0.75);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            flex: 1 1 540px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(52, 211, 153, 0.18);
+            color: #6ee7b7;
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        header.hero h1 {
+            font-size: 2.6rem;
+            margin: 0 0 18px 0;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        header.hero .lead-manifesto {
+            font-size: 1.2rem;
+            margin: 0 0 24px 0;
+            line-height: 1.65;
+            color: #ecfdf5;
+            font-weight: 400;
+            background: rgba(255, 255, 255, 0.08);
+            border-left: 4px solid var(--gold);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .pillars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pillar-tag {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 960px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .meta-box {
+            background-color: var(--card-bg);
+            border-left: 6px solid var(--secondary);
+            padding: 22px 28px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            border-radius: 0 12px 12px 0;
+            font-size: 1.05rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        section.chapter {
+            background-color: var(--card-bg);
+            margin-bottom: 32px;
+            padding: 42px;
+            border-radius: 16px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.04);
+            border: 1px solid rgba(27, 107, 79, 0.08);
+        }
+
+        h2 {
+            font-size: 1.55rem;
+            color: var(--primary);
+            border-bottom: 2px solid #a7f3d0;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 22px;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            text-align: justify;
+            font-size: 1.08rem;
+        }
+
+        .quote {
+            background: linear-gradient(to right, #ecfdf5, #f0fdf4);
+            border-left: 5px solid var(--secondary);
+            padding: 22px 26px;
+            margin: 26px 0;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 600;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.12rem;
+        }
+
+        .highlight-ai {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .highlight-ai h2 {
+            color: #38bdf8;
+            border-bottom-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .highlight-ai .quote {
+            background: rgba(56, 189, 248, 0.12);
+            border-left-color: #38bdf8;
+            color: #e0f2fe;
+        }
+
+        /* Media Gallery */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            margin-top: 28px;
+        }
+
+        .media-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .media-card img,
+        .media-card video {
+            width: 100%;
+            display: block;
+            max-height: 560px;
+            object-fit: cover;
+        }
+
+        .media-caption {
+            padding: 16px 20px;
+            font-size: 0.98rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 60px;
+            padding: 36px 20px;
+            font-size: 1rem;
+            color: var(--muted);
+            border-top: 1px solid #cbd5e1;
+            background-color: #ffffff;
+        }
+
+        .footer-note a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            header.hero { padding: 45px 18px; }
+            header.hero h1 { font-size: 2rem; text-align: center; }
+            .hero-badge { display: table; margin: 0 auto 14px; }
+            section.chapter { padding: 26px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-avatar-wrap">
+                <img class="hero-avatar" src="portrait.png" alt="Chân dung Kỹ sư & Kiến trúc sư cuộc sống xAI Lê Văn Hào">
+            </div>
+            <div class="hero-content">
+                <span class="hero-badge">🌟 LÊ VĂN HÀO • HÀNH TRÌNH TRUYỀN CẢM HỨNG</span>
+                <h1>HÀNH TRÌNH HẠNH PHÚC</h1>
+                <div class="lead-manifesto">
+                    “Từ đôi bàn tay thợ lành nghề đến người kỹ sư giàu kinh nghiệm xây dựng cuộc sống phồn hoa phố thị Sài Gòn, và kiến trúc sư kiến tạo cuộc sống <strong>xAI</strong>, người truyền lửa phổ cập công nghệ <strong>AI</strong> đến cho cộng đồng từ những bước chân đầu tiên, thành một <strong>Marathoner</strong> đầy cảm hứng.”
+                </div>
+                <div class="pillars">
+                    <span class="pillar-tag">🛠️ Đôi Bàn Tay Thợ Lành Nghề</span>
+                    <span class="pillar-tag">🏙️ Kỹ Sư Kiến Tạo Phố Thị Sài Gòn</span>
+                    <span class="pillar-tag">🤖 Kiến Trúc Sư Cuộc Sống xAI</span>
+                    <span class="pillar-tag">🔥 Người Truyền Lửa AI Cộng Đồng</span>
+                    <span class="pillar-tag">🏃‍♂️ Marathoner Truyền Cảm Hứng (BIB M 80137)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="meta-box">
+            <div><strong>Nhân vật & Tác giả:</strong> Lê Văn Hào</div>
+            <div><strong>Sứ mệnh:</strong> Kỹ sư HVAC/MEP • Kiến trúc sư Cuộc sống xAI • Marathoner</div>
+            <div><strong>Đô thị gắn bó:</strong> Sài Gòn – TP. Hồ Chí Minh</div>
+        </div>
+
+        <section class="chapter">
+            <h2>Lời Mở Đầu: Khát Vọng Giữa Phố Thị Phồn Hoa</h2>
+            <p>Một mình rời quê lên phố với hai bàn tay trắng, chắt chiu từng giọt mồ hôi nơi xưởng máy để bước vào cổng trường Đại học ở tuổi 24. Hôm nay, giữa những tòa cao ốc rực sáng của phố thị Sài Gòn – TP. Hồ Chí Minh phồn hoa, giàu đẹp và nghĩa tình, tôi nhìn lại chặng đường đã qua bằng lòng biết ơn sâu sắc.</p>
+            <p>Đó không chỉ là hành trình từ một người thợ lành nghề trở thành người kỹ sư giàu kinh nghiệm, mà còn là bước chuyển mình mạnh mẽ thành <strong>kiến trúc sư kiến tạo cuộc sống xAI</strong>, người truyền lửa phổ cập công nghệ Trí tuệ Nhân tạo (AI) cho cộng đồng từ những bước chân đầu tiên, và một <strong>Marathoner</strong> bền bỉ truyền cảm hứng sống tích cực mỗi ngày.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Chương I: Chuyến Xe Đêm Lên Phố & Đôi Bàn Tay Thợ Lành Nghề</h2>
+            <p>Ai trong đời cũng có một điểm xuất phát, và điểm xuất phát của tôi bắt đầu từ một chiếc ba lô bạc màu trên chuyến xe khách đêm tiến về Sài Gòn. Khi ấy, tôi chỉ là một chàng trai trẻ một mình rời quê hương, mang theo hành trang duy nhất là sức vóc của tuổi trẻ, đôi bàn tay người thợ không ngại việc khó và một khát vọng đổi đời âm ỉ cháy trong lồng ngực.</p>
+            <p>Những năm tháng trực tiếp cầm đồ nghề nơi xưởng máy và công trường đã rèn giũa cho tôi đôi bàn tay thợ lành nghề, sự tỉ mỉ, kỷ luật thép và lòng tự trọng nghề nghiệp. Trong tiếng máy chạy rền vang và những ca làm việc kéo dài 10 đến 12 tiếng mỗi ngày, từng mối hàn, từng đường ống, từng chi tiết kỹ thuật đều được chăm chút bằng tất cả sự tận tâm.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Chương II: Tuổi 24 Và Kỳ Tích Dưới Ánh Đèn Vàng Phòng Trọ</h2>
+            <p>Ở tuổi 24 — cái tuổi mà bạn bè đồng trang lứa đã tốt nghiệp đại học và yên bề công việc — tôi lại đưa ra quyết định khiến nhiều người ngỡ ngàng: Ôn thi Đại học. Nhiều người khuyên tôi rằng đã có tay nghề vững, thu nhập ổn định rồi thì cần gì phải khổ cực quay lại từ đầu. Nhưng tôi hiểu rõ, trở ngại lớn nhất của đời người không phải là tuổi tác, mà là sự bằng lòng với giới hạn của chính mình.</p>
+            <div class="quote">
+                "Ban ngày đổ mồ hôi bên máy móc để nuôi sống ước mơ, ban đêm chong đèn bên trang sách cũ để mở lối tương lai. Ở tuổi 24, tôi thi bằng sinh mệnh và nghị lực của một người đàn ông tự lập."
+            </div>
+        </section>
+
+        <section class="chapter">
+            <h2>Chương III: Người Kỹ Sư Giàu Kinh Nghiệm Xây Dựng Cuộc Sống Phồn Hoa Phố Thị Sài Gòn</h2>
+            <p>Bước vào giảng đường đại học với nền tảng là một người thợ thực chiến, sự kết hợp giữa đôi bàn tay lành nghề và tư duy hệ thống của người kỹ sư đã giúp tôi bứt phá mạnh mẽ. Qua nhiều năm tháng lăn lộn tại các dự án lớn nhỏ, tôi trưởng thành thành một Kỹ sư giàu kinh nghiệm trong ngành Cơ Điện Lạnh (HVAC/MEP), trực tiếp góp phần dựng xây những công trình hiện đại, mang lại nhịp thở mát lành và diện mạo phồn hoa cho phố thị Sài Gòn.</p>
+            <p>Với tôi, mỗi tòa nhà vươn cao, mỗi hệ thống vận hành chuẩn xác giữa lòng thành phố không chỉ là thành quả kỹ thuật, mà còn là lời tri ân thiết thực nhất gửi đến mảnh đất Sài Gòn bao dung đã cưu mang và chắp cánh cho chàng thanh niên năm ấy.</p>
+        </section>
+
+        <section class="chapter highlight-ai">
+            <h2>Chương IV: Kiến Trúc Sư Kiến Tạo Cuộc Sống xAI & Người Truyền Lửa Phổ Cập Công Nghệ AI Cho Cộng Đồng</h2>
+            <p>Không dừng lại ở những bản vẽ cơ điện hay những công trình bê tông cốt thép, tôi nhận ra kỷ nguyên Trí tuệ Nhân tạo (AI) chính là chìa khóa mở ra tương lai mới cho mỗi cá nhân và doanh nghiệp. Với tinh thần học hỏi không ngừng của người kỹ sư, tôi tiên phong làm chủ công nghệ để trở thành <strong>Kiến trúc sư kiến tạo cuộc sống xAI</strong> — kết nối sức mạnh của AI vào công việc, quản trị và đời sống thực tiễn.</p>
+            <div class="quote">
+                "Công nghệ AI chỉ thực sự có ý nghĩa khi phục vụ con người và nâng tầm cuộc sống. Từ những bước chân đầu tiên, tôi chọn làm người truyền lửa để bất kỳ ai trong cộng đồng cũng có thể chạm tới và làm chủ AI."
+            </div>
+            <p>Bằng sự giản dị, gần gũi của một người đi lên từ thực tế, tôi miệt mài chia sẻ, hướng dẫn và truyền lửa phổ cập công nghệ AI đến cho cộng đồng ngay từ những bước khởi đầu đầu tiên — giúp mọi người tự tin ứng dụng AI để giải phóng sức lao động, nhân đôi hiệu suất và kiến tạo một cuộc sống thông minh, thịnh vượng hơn.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Chương V: Marathoner Đầy Cảm Hứng – "Mọi Chuyện Đều Có Thể!"</h2>
+            <p>Giữa nhịp sống hối hả của công trường và dòng chảy công nghệ xAI, tôi tìm thấy sự cân bằng trọn vẹn trên những cung đường chạy bộ đường dài. Khoác lên mình tấm <strong>BIB M 80137</strong>, từng bước chân chinh phục cự ly Marathon không chỉ là hành trình rèn luyện Thân – Tâm – Trí, mà còn là minh chứng sống động cho ý chí bền bỉ: xuất phát điểm ở đâu không quan trọng, quan trọng là bạn kiên trì tiến về phía trước.</p>
+            <p>Những buổi sáng sải bước dưới hàng dừa xanh mát tại giải <strong>VnExpress Marathon Green Paradise Cần Giờ</strong>, đeo trên ngực tấm huy chương hoàn thành (Finisher) và cùng những người anh chị em đồng đội hô vang khẩu hiệu tại <em>Trạm Dấu Ấn Bản Lĩnh</em> chính là khoảnh khắc kết tinh đẹp đẽ nhất của một <strong>Marathoner đầy cảm hứng</strong>.</p>
+
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="marathon-cangio.jpg" alt="Kỹ sư Lê Văn Hào (BIB M 80137) cùng đồng đội tại VnExpress Marathon Green Paradise Cần Giờ">
+                    <div class="media-caption">
+                        🏅 Kỹ sư – Marathoner Lê Văn Hào (BIB M 80137, thứ 3 từ trái sang) cùng những người đồng đội tuyệt vời tại VnExpress Marathon Green Paradise Cần Giờ.
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <video controls preload="metadata" poster="marathon-cangio.jpg">
+                        <source src="dau-an-ban-linh.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ phát video trực tiếp.
+                    </video>
+                    <div class="media-caption">
+                        🎬 Khoảnh khắc truyền lửa tại Trạm Dấu Ấn Bản Lĩnh: “Mọi chuyện đều có thể! Chúng tôi làm được! Bạn làm được! Yeah!”
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-note">
+        <p>© 2026 <strong>Lê Văn Hào – Hành Trình Hạnh Phúc</strong> • Kỹ Sư Xây Dựng Phố Thị Sài Gòn • Kiến Trúc Sư Cuộc Sống xAI • Marathoner Truyền Cảm Hứng</p>
+        <p style="margin-top: 8px; text-align: center;">
+            <a href="https://vanhaobiz.github.io/portal-hub/">← Quay về Trung Tâm Quản Trị Website (@vanhaobiz)</a>
+        </p>
+    </div>
+
+</body>
+</html>
